@@ -100,7 +100,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/html5-地理定位/" style="font-size: 10px;">html5 地理定位</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a>
+						<a href="/tags/html5-地理定位/" style="font-size: 10px;">html5 地理定位</a> <a href="/tags/杂记/" style="font-size: 20px;">杂记</a> <a href="/tags/高德地图API-Javascript/" style="font-size: 10px;">高德地图API,Javascript</a>
 					</div>
 				</section>
 				
@@ -157,6 +157,145 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-随笔" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/26/随笔/" class="article-date">
+  	<time datetime="2016-05-26T08:42:03.000Z" itemprop="datePublished">2016-05-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/26/随笔/">随笔</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>你总说毕业遥遥无期，转眼就各奔东西。
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/26/随笔/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-使用高德地图JS-API" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/02/使用高德地图JS-API/" class="article-date">
+  	<time datetime="2016-03-02T07:07:47.000Z" itemprop="datePublished">2016-03-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/02/使用高德地图JS-API/">使用高德地图JS-API</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#160; &#160; &#160; &#160;之前简单介绍过百度地图API的使用，由于最近在学习Javascript，正好看到一个高德地图JS-API的教程，所以就自己动手实际使用一下这个API。<br>&#160; &#160; &#160; &#160;高德LSB平台提供了很多的API和SDK，对于开发者来说非常方便。首先注册官网，获取Javascript-API的key，然后就可以使用了。在需要使用的网页文本中添加<br>    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=你的key"></script></p>
+<ol>
+<li>首先地图是一个Map类，封装了地图显示，交互等操作的方法。首先初始化一个地图对象。然后就可以看到地图了。<br> var map = new AMap.Map(‘map’);<br><img src="/img/map.png" alt="初始化的地图"><br>&#160; &#160; &#160; &#160;当然初始化地图时有很多可选参数来定制初始的地图。</li>
+<li>Map类还提供了很多方法使用。如获取当前地图缩放级别，获取地图中心点经纬度坐标值等。</li>
+<li>还可以为地图添加触发事件。如当前地图加载完成后的事件，拖拽地图触发的事件等。</li>
+<li>可以为地图添加插件。四个常用的插件有：比例尺，鹰眼，地图类型转换，工具条。<br> //增加比例尺<pre><code>map.plugin([&apos;AMap.Scale&apos;],function(){
+    var scale = new AMap.Scale();
+    map.addControl(scale);
+});
+//增加工具条
+map.plugin([&apos;AMap.ToolBar&apos;],function(){
+    var tool = new AMap.ToolBar();
+    map.addControl(tool);
+});
+//加载鹰眼
+map.plugin([&quot;AMap.OverView&quot;],function(){
+    view = new AMap.OverView();
+    view.open();
+    map.addControl(view);
+});
+//加载地图类型
+map.plugin([&apos;AMap.MapType&apos;],function(){
+    var type = new AMap.MapType();
+    map.addControl(type);
+});
+</code></pre>&#160; &#160; &#160; &#160;效果如下：<br><img src="/img/map1.png" alt="加入插件后的地图"><br>鼠标插件可以实现地区面积，距离的计算：<br><img src="/img/maparea.png" alt="计算地区面积"></li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高德地图API-Javascript/">高德地图API,Javascript</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-随想" class="article article-type-post" itemscope itemprop="blogPost">
   
