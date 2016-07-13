@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016/2 | Yanggali</title>
+  <title>Yanggali</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="杨佳莉博客">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Yanggali">
-<meta property="og:url" content="http://yoursite.com/archives/2016/02/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Yanggali">
 <meta property="og:description" content="杨佳莉博客">
 <meta name="twitter:card" content="summary">
@@ -158,52 +158,69 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-搭建Hexo" class="article article-type-post" itemscope itemprop="blogPost">
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/02/22/随想/" class="archive-article-date">
-  	<time datetime="2016-02-22T10:13:08.000Z" itemprop="datePublished">Feb 22</time>
+    <div class="article-meta">
+      <a href="/2015/12/09/搭建Hexo/" class="article-date">
+  	<time datetime="2015-12-09T08:38:11.000Z" itemprop="datePublished">2015-12-09</time>
 </a>
-        </div>
-    	 
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/22/随想/">随想</a>
+      <a class="article-title" href="/2015/12/09/搭建Hexo/">搭建Hexo</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </header>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>===Github上搭建hexo博客</p>
+<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>之前在github上搭建了一个静态页面，但是发现发表文章特别不方便，就去了解hexo博客，发现它更新文章非常方便，所以把博客改成了hexo。本人也是完全小白一个，属于动手能力很差的那种，这次弄这个博客也是出了很多错误，搞了好久才弄出来，所以写下这篇文章来记录一下过程，也是防止以后忘记。如果有哪里错误的地方，希望各位可以给我发邮件，谢谢~</p>
+<h1 id="u6B63_u6587"><a href="#u6B63_u6587" class="headerlink" title="正文"></a>正文</h1><ol>
+<li>首先安装git和node.js<br>Git到官网下载，安装有很多教程，而且很简单，请各位自己搜教程。<br>Node.js到node.js的中文网<a href="http://nodejs.cn/下载">http://nodejs.cn/下载</a><br>验证是否安装成功在cmd中输入git –version和node -v，如果显示git和node的版本号则安装成功</li>
+<li>安装hexo<br>随便在哪里打开git，输入命令<br><strong>npm install –g hexo</strong><br>结果出现错误
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/09/搭建Hexo/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </div>
       <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
@@ -234,9 +251,9 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: false,
+		isHome: true,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
