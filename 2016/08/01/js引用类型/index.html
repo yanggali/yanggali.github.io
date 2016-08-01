@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Yanggali</title>
+  <title>js引用类型 | Yanggali</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="杨佳莉博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yanggali">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="这段时间在看js高程这本书，看到第五章讲了引用类型，觉得比较重要所以写下这篇笔记。写的比较随意，完全是为了自己再理清一遍。
+#1. 引用类型
+##1.1 Object大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js引用类型">
+<meta property="og:url" content="http://yoursite.com/2016/08/01/js引用类型/index.html">
 <meta property="og:site_name" content="Yanggali">
-<meta property="og:description" content="杨佳莉博客">
+<meta property="og:description" content="这段时间在看js高程这本书，看到第五章讲了引用类型，觉得比较重要所以写下这篇笔记。写的比较随意，完全是为了自己再理清一遍。
+#1. 引用类型
+##1.1 Object大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：">
+<meta property="og:updated_time" content="2016-08-01T07:57:12.790Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yanggali">
-<meta name="twitter:description" content="杨佳莉博客">
+<meta name="twitter:title" content="js引用类型">
+<meta name="twitter:description" content="这段时间在看js高程这本书，看到第五章讲了引用类型，觉得比较重要所以写下这篇笔记。写的比较随意，完全是为了自己再理清一遍。
+#1. 引用类型
+##1.1 Object大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：">
   
     <link rel="alternative" href="/atom.xml" title="Yanggali" type="application/atom+xml">
   
@@ -156,9 +163,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-js引用类型" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-js引用类型" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/08/01/js引用类型/" class="article-date">
@@ -174,71 +179,75 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/01/js引用类型/">js引用类型</a>
+    <h1 class="article-title" itemprop="name">
+      js引用类型
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记-js引用类型/">读书笔记,js引用类型</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
         <p>这段时间在看js高程这本书，看到第五章讲了引用类型，觉得比较重要所以写下这篇笔记。写的比较随意，完全是为了自己再理清一遍。</p>
 <p>#1. 引用类型</p>
-<p>##1.1 Object<br>大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书笔记-js引用类型/">读书笔记,js引用类型</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/08/01/js引用类型/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-引用类型" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/01/引用类型/" class="article-date">
-  	<time datetime="2016-08-01T06:09:39.703Z" itemprop="datePublished">2016-08-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#引用类型：Object Array Date RegExp Function</p>
-<p>#基本包装类型:</p>
-<ol>
-<li>Boolean</li>
-<li>Number<br> toFixed()<br> toExponential()<br> toPrecision()<br>##3. String</li>
-</ol>
+<p>##1.1 Object<br>大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：<a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stu = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">stu.name = <span class="string">"yang"</span>;</span><br><span class="line">stu.age = <span class="number">20</span>;</span><br><span class="line"><span class="comment">//常用的是对象字面量表示法</span></span><br><span class="line"><span class="keyword">var</span> stu = &#123;</span><br><span class="line">    name:<span class="string">"yang"</span>,</span><br><span class="line">    age:<span class="number">20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>##1.2 Array<br>创建方法有两种：构造函数方法和数组字面量方法。<br>数组的操作方法有栈方法:push()和pop()；队列方法:push()和shift()；反向队列:unshift()和pop()；<br>重排序方法：reverse()，sort(compareFunction)<br>sort()用法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">"color"</span>,<span class="string">"amy"</span>,<span class="string">"yellow"</span>,<span class="string">"purple"</span>,<span class="string">"red"</span>];</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">compare</span> (<span class="params">element1,element2</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (element1&lt;element2) &#123;</span><br><span class="line">                <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (element1 &gt; element2) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arr.sort(compare);</span><br></pre></td></tr></table></figure></p>
+<p>操作方法：</p>
+<ul>
+<li>删除：splice(0,2)删除前两项</li>
+<li>插入：splice(起始位置，要删除的项数[插入时这项始终为0]，个数不限的要插入的项)</li>
+<li>替换：splice(2,1,”green”),从位置2开始删除一项，替换成green</li>
+</ul>
+<p>#<em>迭代方法</em>#<br>每个迭代方法的参数都是一个函数，参数为item,index,array</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>every()</td>
+<td>每一项都返回True，结果为True</td>
+</tr>
+<tr>
+<td>some()</td>
+<td>有一项返回True，结果为True</td>
+</tr>
+<tr>
+<td>filter()</td>
+<td>返回符合条件的item</td>
+</tr>
+<tr>
+<td>map()</td>
+<td>每一项进行映射后返回</td>
+</tr>
+<tr>
+<td>forEach()</td>
+<td>无返回值</td>
+</tr>
+</tbody>
+</table>
+<p>##1.3 Date<br>表示时间的对象</p>
+<p>##1.4 RegExp<br>实例方法：exec(str),返回包含第一个匹配项信息的数组，和test(str)，返回true或false</p>
+<p>##1.5 Function<br>函数在js中也是一种对象，可以作为函数参数和返回值，具体属性和方法在此不详述。</p>
+<p>#2. 基本包装类型:</p>
+<p>##2.1 Boolean</p>
+<p>##2.2 Number<br>    toFixed()<br>    toExponential()<br>    toPrecision()</p>
+<p>##2.3 String</p>
 <ul>
 <li>字符串操作：concat() slice() substring() substr()</li>
 <li>字符串位置：indexOf(goalstr,startindex),lastIndexOf()</li>
@@ -249,8 +258,8 @@
 <li>根据字符ASC编码转换成字符：fromCharCode()</li>
 <li>HTML方法：anchor(name) big() bold()等</li>
 </ul>
-<p>#单体内置对象：Global和Math</p>
-<p>##Global对象<br>不属于任何对象的属性和方法都是Global对象的属性和方法，也就是说，没有所谓的全局变量和全局函数，它们其实都属于Global对象</p>
+<p>#3. 单体内置对象：Global和Math</p>
+<p>##3.1 Global对象<br>不属于任何对象的属性和方法都是Global对象的属性和方法，也就是说，没有所谓的全局变量和全局函数，它们其实都属于Global对象</p>
 <ul>
 <li>encodeURI() encodeURIComponent() decodeURI() decodeURIComponoent()</li>
 <li>eval():相当于一个完整的ECMAScript解析器，接收要执行的ECMAScript字符串。使用时需要特别谨慎，尤其是在它执行用户输入数据的情况下。</li>
@@ -293,8 +302,8 @@
 <ul>
 <li>window对象</li>
 </ul>
-<p>##Math对象：</p>
-<p>###Math对象的属性如下：</p>
+<p>##3.2 Math对象：</p>
+<p>###3.2.1 Math对象的属性如下：</p>
 <table>
 <thead>
 <tr>
@@ -325,221 +334,78 @@
 </tr>
 </tbody>
 </table>
-<p>###min()和max()方法</p>
+<p>###3.2.2 min()和max()方法</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.min(<span class="number">23</span>,<span class="number">4</span>,<span class="number">43</span>,<span class="number">13</span>,<span class="number">45</span>);  <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
 <p>要找到数组中的最大或最小值，可以像下面这样使用apply()方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">12</span>,<span class="number">23</span>,<span class="number">42</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">43</span>,<span class="number">25</span>];</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>,values);</span><br></pre></td></tr></table></figure></p>
-<p>###舍入方法</p>
+<p>###3.2.3 舍入方法</p>
 <ul>
 <li>ceil() 向上舍入</li>
 <li>floor() 向下舍入</li>
 <li>round() 四舍五入</li>
 </ul>
-<p>###random()方法<br>返回介于0和1之间的一个随机数，如下面的例子返回一个1到10之间的随机数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> temp = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">10</span>);</span><br></pre></td></tr></table></figure></p>
+<p>###3.2.4 random()方法<br>返回介于0和1之间的一个随机数，如下面的例子返回一个1到10之间的随机数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> temp = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">10</span>);</span><br></pre></td></tr></table></figure></p>
 <p>返回一个lowercase到uppercase之间的随机数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectFrom</span> (<span class="params">lowervalue,uppervalue</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> choices = uppervalue - lowervalue +<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*choices+lowervalue);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>###其他方法<br>方法 | 说明<br>—- | —-<br>Math.abs(num) | 返回数值的绝对值<br>Math.sin(x) | 返回x的正弦值<br>Math.cos(x) | 返回x的余弦值<br>Math.exp(num) | 返回e的num次方<br>Math.log(num) | 返回num的自然对数<br>Math.sqrtnum) | 返回num的平方根</p>
+<p>###3.2.5 其他方法<br>方法 | 说明<br>—- | —-<br>Math.abs(num) | 返回数值的绝对值<br>Math.sin(x) | 返回x的正弦值<br>Math.cos(x) | 返回x的余弦值<br>Math.exp(num) | 返回e的num次方<br>Math.log(num) | 返回num的自然对数<br>Math.sqrtnum) | 返回num的平方根</p>
 
       
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/08/01/引用类型/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
 
 
-
-
-
-
-
-  
-    <article id="post-Flexbox使用" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/13/Flexbox使用/" class="article-date">
-  	<time datetime="2016-07-13T01:33:26.000Z" itemprop="datePublished">2016-07-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/13/Flexbox使用/">Flexbox使用</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近看了一个CSS3中的新属性：flex。它是一种不同于块和内联模型的新布局模型。它包括flex container和子元素flex items，利用属性的定义可以自由地控制其子元素的布局。
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3-flex/">CSS3,flex</a></li></ul>
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/07/13/Flexbox使用/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
-
-
-
-
-  
-    <article id="post-毕业了" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/26/毕业了/" class="article-date">
-  	<time datetime="2016-05-26T08:42:03.000Z" itemprop="datePublished">2016-05-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/26/毕业了/">毕业了</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#160; &#160; &#160; &#160;你总说毕业遥遥无期，转眼就各奔东西。
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/26/毕业了/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="js引用类型" data-title="js引用类型" data-url="http://yoursite.com/2016/08/01/js引用类型/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-
-  
-    <article id="post-使用高德地图JS-API" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/02/使用高德地图JS-API/" class="article-date">
-  	<time datetime="2016-03-02T07:07:47.000Z" itemprop="datePublished">2016-03-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/02/使用高德地图JS-API/">使用高德地图JS-API</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#160; &#160; &#160; &#160;之前简单介绍过百度地图API的使用，由于最近在学习Javascript，正好看到一个高德地图JS-API的教程，所以就自己动手实际使用一下这个API。
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高德地图API-Javascript/">高德地图API,Javascript</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/02/使用高德地图JS-API/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 </div>
       <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
@@ -570,8 +436,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

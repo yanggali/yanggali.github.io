@@ -100,7 +100,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS3-flex/" style="font-size: 10px;">CSS3,flex</a> <a href="/tags/html5-地理定位/" style="font-size: 10px;">html5 地理定位</a> <a href="/tags/杂记/" style="font-size: 20px;">杂记</a> <a href="/tags/高德地图API-Javascript/" style="font-size: 10px;">高德地图API,Javascript</a>
+						<a href="/tags/CSS3-flex/" style="font-size: 10px;">CSS3,flex</a> <a href="/tags/html5-地理定位/" style="font-size: 10px;">html5 地理定位</a> <a href="/tags/杂记/" style="font-size: 20px;">杂记</a> <a href="/tags/读书笔记-js引用类型/" style="font-size: 10px;">读书笔记,js引用类型</a> <a href="/tags/高德地图API-Javascript/" style="font-size: 10px;">高德地图API,Javascript</a>
 					</div>
 				</section>
 				
@@ -157,6 +157,144 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-随想" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/22/随想/" class="article-date">
+  	<time datetime="2016-02-22T10:13:08.000Z" itemprop="datePublished">2016-02-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/22/随想/">随想</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天是大四下开学的第一天，虽说本人不上课已经很久了，但是看着身边领书上课的学弟学妹还是感慨颇多。过去的2015年经历了很多以前从未经历过的事，做了一个很重要的决定——保研。由于种种原因，也只是保送了本校的研究生。当时做这个决定的时候曾经有个人极力地劝阻我不要这么做，但当时还是铁了心地坚持了下去。我以为我会一直这么坚持的
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/02/22/随想/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-html5地理定位" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/14/html5地理定位/" class="article-date">
+  	<time datetime="2015-12-14T12:26:46.000Z" itemprop="datePublished">2015-12-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/14/html5地理定位/">html5地理定位</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>今天看了一点html5，发现它相对于html添加了很多新特性，比如画布，可以播放视频音频等。但是我印象比较深刻的是这个地理定位，html5中有一个geolocation API，通过它可以获取当前我的位置。所以我动手实践了一下。这个接口需要的浏览器支持是：Internet Explorer 9、Firefox、Chrome、Safari 以及 Opera。我使用的是Chorme。</p>
+<h1 id="u4F7F_u7528_u767E_u5EA6API"><a href="#u4F7F_u7528_u767E_u5EA6API" class="headerlink" title="使用百度API"></a>使用百度API</h1><p>由于我是想在地图中显示我的位置，所以需要引入地图。这里我使用了百度地图的API。首先看一下能否成功。</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;/&gt;
+&lt;title&gt;测试html5地理定位&lt;/title&gt;
+&lt;script src=&quot;http://api.map.baidu.com/api?v=1.2&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    function initialize(){
+        //初始化地图
+        var map = new BMap.Map(&quot;map&quot;);
+        //确定中心点，这里我使用的是苏州独墅湖某点
+        var point = new BMap.Point(120.730435, 31.273391);
+        //在地图中将中心点定位到point，地图级别为15
+        map.centerAndZoom(point, 15);
+        map.addControl(new BMap.NavigationControl());
+    }
+    window.onload = initialize;
+   &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;map&quot; style=&quot;width:400px;height:400px&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>可以得到结果以point为中心的一块区域<br><img src="/img/article2_1.png" alt="suzhou"></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5-地理定位/">html5 地理定位</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-搭建Hexo" class="article article-type-post" itemscope itemprop="blogPost">
   
