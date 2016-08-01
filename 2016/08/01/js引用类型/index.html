@@ -6,21 +6,18 @@
   <title>js引用类型 | Yanggali</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="这段时间在看js高程这本书，看到第五章讲了引用类型，觉得比较重要所以写下这篇笔记。写的比较随意，完全是为了自己再理清一遍。
-#1. 引用类型
-##1.1 Object大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：">
+1. 引用类型1.1 Object大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js引用类型">
 <meta property="og:url" content="http://yoursite.com/2016/08/01/js引用类型/index.html">
 <meta property="og:site_name" content="Yanggali">
 <meta property="og:description" content="这段时间在看js高程这本书，看到第五章讲了引用类型，觉得比较重要所以写下这篇笔记。写的比较随意，完全是为了自己再理清一遍。
-#1. 引用类型
-##1.1 Object大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：">
-<meta property="og:updated_time" content="2016-08-01T07:57:12.790Z">
+1. 引用类型1.1 Object大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：">
+<meta property="og:updated_time" content="2016-08-01T08:01:27.944Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js引用类型">
 <meta name="twitter:description" content="这段时间在看js高程这本书，看到第五章讲了引用类型，觉得比较重要所以写下这篇笔记。写的比较随意，完全是为了自己再理清一遍。
-#1. 引用类型
-##1.1 Object大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：">
+1. 引用类型1.1 Object大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：">
   
     <link rel="alternative" href="/atom.xml" title="Yanggali" type="application/atom+xml">
   
@@ -201,16 +198,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>这段时间在看js高程这本书，看到第五章讲了引用类型，觉得比较重要所以写下这篇笔记。写的比较随意，完全是为了自己再理清一遍。</p>
-<p>#1. 引用类型</p>
-<p>##1.1 Object<br>大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：<a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stu = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">stu.name = <span class="string">"yang"</span>;</span><br><span class="line">stu.age = <span class="number">20</span>;</span><br><span class="line"><span class="comment">//常用的是对象字面量表示法</span></span><br><span class="line"><span class="keyword">var</span> stu = &#123;</span><br><span class="line">    name:<span class="string">"yang"</span>,</span><br><span class="line">    age:<span class="number">20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>##1.2 Array<br>创建方法有两种：构造函数方法和数组字面量方法。<br>数组的操作方法有栈方法:push()和pop()；队列方法:push()和shift()；反向队列:unshift()和pop()；<br>重排序方法：reverse()，sort(compareFunction)<br>sort()用法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">"color"</span>,<span class="string">"amy"</span>,<span class="string">"yellow"</span>,<span class="string">"purple"</span>,<span class="string">"red"</span>];</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">compare</span> (<span class="params">element1,element2</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (element1&lt;element2) &#123;</span><br><span class="line">                <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (element1 &gt; element2) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arr.sort(compare);</span><br></pre></td></tr></table></figure></p>
+<h1 id="1-__u5F15_u7528_u7C7B_u578B"><a href="#1-__u5F15_u7528_u7C7B_u578B" class="headerlink" title="1. 引用类型"></a>1. 引用类型</h1><h2 id="1-1_Object"><a href="#1-1_Object" class="headerlink" title="1.1 Object"></a>1.1 Object</h2><p>大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：<a id="more"></a><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> stu = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">stu.name = <span class="string">"yang"</span>;</span><br><span class="line">stu.age = <span class="number">20</span>;</span><br><span class="line"><span class="comment">//常用的是对象字面量表示法</span></span><br><span class="line"><span class="keyword">var</span> stu = &#123;</span><br><span class="line">    name:<span class="string">"yang"</span>,</span><br><span class="line">    age:<span class="number">20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="1-2_Array"><a href="#1-2_Array" class="headerlink" title="1.2 Array"></a>1.2 Array</h2><p>创建方法有两种：构造函数方法和数组字面量方法。<br>数组的操作方法有栈方法:push()和pop()；队列方法:push()和shift()；反向队列:unshift()和pop()；<br>重排序方法：reverse()，sort(compareFunction)<br>sort()用法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="string">"color"</span>,<span class="string">"amy"</span>,<span class="string">"yellow"</span>,<span class="string">"purple"</span>,<span class="string">"red"</span>];</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">compare</span> (<span class="params">element1,element2</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (element1&lt;element2) &#123;</span><br><span class="line">                <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (element1 &gt; element2) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arr.sort(compare);</span><br></pre></td></tr></table></figure></p>
 <p>操作方法：</p>
 <ul>
 <li>删除：splice(0,2)删除前两项</li>
 <li>插入：splice(起始位置，要删除的项数[插入时这项始终为0]，个数不限的要插入的项)</li>
 <li>替换：splice(2,1,”green”),从位置2开始删除一项，替换成green</li>
 </ul>
-<p>#<em>迭代方法</em>#<br>每个迭代方法的参数都是一个函数，参数为item,index,array</p>
+<p><em>迭代方法</em><br>每个迭代方法的参数都是一个函数，参数为item,index,array</p>
 <table>
 <thead>
 <tr>
@@ -241,14 +237,13 @@
 </tr>
 </tbody>
 </table>
-<p>##1.3 Date<br>表示时间的对象</p>
-<p>##1.4 RegExp<br>实例方法：exec(str),返回包含第一个匹配项信息的数组，和test(str)，返回true或false</p>
-<p>##1.5 Function<br>函数在js中也是一种对象，可以作为函数参数和返回值，具体属性和方法在此不详述。</p>
-<p>#2. 基本包装类型:</p>
-<p>##2.1 Boolean</p>
-<p>##2.2 Number<br>    toFixed()<br>    toExponential()<br>    toPrecision()</p>
-<p>##2.3 String</p>
-<ul>
+<h2 id="1-3_Date"><a href="#1-3_Date" class="headerlink" title="1.3 Date"></a>1.3 Date</h2><p>表示时间的对象</p>
+<h2 id="1-4_RegExp"><a href="#1-4_RegExp" class="headerlink" title="1.4 RegExp"></a>1.4 RegExp</h2><p>实例方法：exec(str),返回包含第一个匹配项信息的数组，和test(str)，返回true或false</p>
+<h2 id="1-5_Function"><a href="#1-5_Function" class="headerlink" title="1.5 Function"></a>1.5 Function</h2><p>函数在js中也是一种对象，可以作为函数参数和返回值，具体属性和方法在此不详述。</p>
+<h1 id="2-__u57FA_u672C_u5305_u88C5_u7C7B_u578B_3A"><a href="#2-__u57FA_u672C_u5305_u88C5_u7C7B_u578B_3A" class="headerlink" title="2. 基本包装类型:"></a>2. 基本包装类型:</h1><h2 id="2-1_Boolean"><a href="#2-1_Boolean" class="headerlink" title="2.1 Boolean"></a>2.1 Boolean</h2><h2 id="2-2_Number"><a href="#2-2_Number" class="headerlink" title="2.2 Number"></a>2.2 Number</h2><pre><code>toFixed()
+toExponential()
+toPrecision()
+</code></pre><h2 id="2-3_String"><a href="#2-3_String" class="headerlink" title="2.3 String"></a>2.3 String</h2><ul>
 <li>字符串操作：concat() slice() substring() substr()</li>
 <li>字符串位置：indexOf(goalstr,startindex),lastIndexOf()</li>
 <li>删除所有空格：trim()</li>
@@ -258,8 +253,7 @@
 <li>根据字符ASC编码转换成字符：fromCharCode()</li>
 <li>HTML方法：anchor(name) big() bold()等</li>
 </ul>
-<p>#3. 单体内置对象：Global和Math</p>
-<p>##3.1 Global对象<br>不属于任何对象的属性和方法都是Global对象的属性和方法，也就是说，没有所谓的全局变量和全局函数，它们其实都属于Global对象</p>
+<h1 id="3-__u5355_u4F53_u5185_u7F6E_u5BF9_u8C61_uFF1AGlobal_u548CMath"><a href="#3-__u5355_u4F53_u5185_u7F6E_u5BF9_u8C61_uFF1AGlobal_u548CMath" class="headerlink" title="3. 单体内置对象：Global和Math"></a>3. 单体内置对象：Global和Math</h1><h2 id="3-1_Global_u5BF9_u8C61"><a href="#3-1_Global_u5BF9_u8C61" class="headerlink" title="3.1 Global对象"></a>3.1 Global对象</h2><p>不属于任何对象的属性和方法都是Global对象的属性和方法，也就是说，没有所谓的全局变量和全局函数，它们其实都属于Global对象</p>
 <ul>
 <li>encodeURI() encodeURIComponent() decodeURI() decodeURIComponoent()</li>
 <li>eval():相当于一个完整的ECMAScript解析器，接收要执行的ECMAScript字符串。使用时需要特别谨慎，尤其是在它执行用户输入数据的情况下。</li>
@@ -302,9 +296,7 @@
 <ul>
 <li>window对象</li>
 </ul>
-<p>##3.2 Math对象：</p>
-<p>###3.2.1 Math对象的属性如下：</p>
-<table>
+<h2 id="3-2_Math_u5BF9_u8C61_uFF1A"><a href="#3-2_Math_u5BF9_u8C61_uFF1A" class="headerlink" title="3.2 Math对象："></a>3.2 Math对象：</h2><h3 id="3-2-1_Math_u5BF9_u8C61_u7684_u5C5E_u6027_u5982_u4E0B_uFF1A"><a href="#3-2-1_Math_u5BF9_u8C61_u7684_u5C5E_u6027_u5982_u4E0B_uFF1A" class="headerlink" title="3.2.1 Math对象的属性如下："></a>3.2.1 Math对象的属性如下：</h3><table>
 <thead>
 <tr>
 <th>属性</th>
@@ -334,18 +326,49 @@
 </tr>
 </tbody>
 </table>
-<p>###3.2.2 min()和max()方法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.min(<span class="number">23</span>,<span class="number">4</span>,<span class="number">43</span>,<span class="number">13</span>,<span class="number">45</span>);  <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-2-2_min_28_29_u548Cmax_28_29_u65B9_u6CD5"><a href="#3-2-2_min_28_29_u548Cmax_28_29_u65B9_u6CD5" class="headerlink" title="3.2.2 min()和max()方法"></a>3.2.2 min()和max()方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.min(<span class="number">23</span>,<span class="number">4</span>,<span class="number">43</span>,<span class="number">13</span>,<span class="number">45</span>);  <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
 <p>要找到数组中的最大或最小值，可以像下面这样使用apply()方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">12</span>,<span class="number">23</span>,<span class="number">42</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">43</span>,<span class="number">25</span>];</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>,values);</span><br></pre></td></tr></table></figure></p>
-<p>###3.2.3 舍入方法</p>
-<ul>
+<h3 id="3-2-3__u820D_u5165_u65B9_u6CD5"><a href="#3-2-3__u820D_u5165_u65B9_u6CD5" class="headerlink" title="3.2.3 舍入方法"></a>3.2.3 舍入方法</h3><ul>
 <li>ceil() 向上舍入</li>
 <li>floor() 向下舍入</li>
 <li>round() 四舍五入</li>
 </ul>
-<p>###3.2.4 random()方法<br>返回介于0和1之间的一个随机数，如下面的例子返回一个1到10之间的随机数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> temp = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">10</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-2-4_random_28_29_u65B9_u6CD5"><a href="#3-2-4_random_28_29_u65B9_u6CD5" class="headerlink" title="3.2.4 random()方法"></a>3.2.4 random()方法</h3><p>返回介于0和1之间的一个随机数，如下面的例子返回一个1到10之间的随机数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> temp = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">10</span>);</span><br></pre></td></tr></table></figure></p>
 <p>返回一个lowercase到uppercase之间的随机数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectFrom</span> (<span class="params">lowervalue,uppervalue</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> choices = uppervalue - lowervalue +<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*choices+lowervalue);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>###3.2.5 其他方法<br>方法 | 说明<br>—- | —-<br>Math.abs(num) | 返回数值的绝对值<br>Math.sin(x) | 返回x的正弦值<br>Math.cos(x) | 返回x的余弦值<br>Math.exp(num) | 返回e的num次方<br>Math.log(num) | 返回num的自然对数<br>Math.sqrtnum) | 返回num的平方根</p>
+<h3 id="3-2-5__u5176_u4ED6_u65B9_u6CD5"><a href="#3-2-5__u5176_u4ED6_u65B9_u6CD5" class="headerlink" title="3.2.5 其他方法"></a>3.2.5 其他方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Math.abs(num)</td>
+<td>返回数值的绝对值</td>
+</tr>
+<tr>
+<td>Math.sin(x)</td>
+<td>返回x的正弦值</td>
+</tr>
+<tr>
+<td>Math.cos(x)</td>
+<td>返回x的余弦值</td>
+</tr>
+<tr>
+<td>Math.exp(num)</td>
+<td>返回e的num次方</td>
+</tr>
+<tr>
+<td>Math.log(num)</td>
+<td>返回num的自然对数</td>
+</tr>
+<tr>
+<td>Math.sqrtnum)</td>
+<td>返回num的平方根</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -356,8 +379,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2016/08/01/引用类型/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+    <a href="/2016/07/13/Flexbox使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Flexbox使用</div>
       <strong class="article-nav-caption">></strong>
     </a>
   

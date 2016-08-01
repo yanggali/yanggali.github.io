@@ -185,8 +185,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>这段时间在看js高程这本书，看到第五章讲了引用类型，觉得比较重要所以写下这篇笔记。写的比较随意，完全是为了自己再理清一遍。</p>
-<p>#1. 引用类型</p>
-<p>##1.1 Object<br>大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：
+<h1 id="1-__u5F15_u7528_u7C7B_u578B"><a href="#1-__u5F15_u7528_u7C7B_u578B" class="headerlink" title="1. 引用类型"></a>1. 引用类型</h1><h2 id="1-1_Object"><a href="#1-1_Object" class="headerlink" title="1.1 Object"></a>1.1 Object</h2><p>大多数引用类型实际上是Object类型的实例。所有的对象都有toLocaleString()、toString()、valueOf()方法。创建方法有两种：构造函数法和对象字面量表示法。分别表示如下：
       
     </div>
     
@@ -203,149 +202,6 @@
         <p class="article-more-link">
           <a  href="/2016/08/01/js引用类型/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-引用类型" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/01/引用类型/" class="article-date">
-  	<time datetime="2016-08-01T06:09:39.703Z" itemprop="datePublished">2016-08-01</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#引用类型：Object Array Date RegExp Function</p>
-<p>#基本包装类型:</p>
-<ol>
-<li>Boolean</li>
-<li>Number<br> toFixed()<br> toExponential()<br> toPrecision()<br>##3. String</li>
-</ol>
-<ul>
-<li>字符串操作：concat() slice() substring() substr()</li>
-<li>字符串位置：indexOf(goalstr,startindex),lastIndexOf()</li>
-<li>删除所有空格：trim()</li>
-<li>字符串大小写转换：toLowerCase() toUpperCase()</li>
-<li>模式匹配：match(RegExp) search(RegExp) replace(RegExp,replace | function(match,pos,originalText)) split()</li>
-<li>字符串比较：localeCompare(str)</li>
-<li>根据字符ASC编码转换成字符：fromCharCode()</li>
-<li>HTML方法：anchor(name) big() bold()等</li>
-</ul>
-<p>#单体内置对象：Global和Math</p>
-<p>##Global对象<br>不属于任何对象的属性和方法都是Global对象的属性和方法，也就是说，没有所谓的全局变量和全局函数，它们其实都属于Global对象</p>
-<ul>
-<li>encodeURI() encodeURIComponent() decodeURI() decodeURIComponoent()</li>
-<li>eval():相当于一个完整的ECMAScript解析器，接收要执行的ECMAScript字符串。使用时需要特别谨慎，尤其是在它执行用户输入数据的情况下。</li>
-<li>Golbal对象属性，如以下的值和构造函数都属于Global对象</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>undefined</td>
-<td>特殊值undefined</td>
-</tr>
-<tr>
-<td>NaN</td>
-<td>特殊值NaN</td>
-</tr>
-<tr>
-<td>Infinity</td>
-<td>特殊值Infinity</td>
-</tr>
-<tr>
-<td>Object</td>
-<td>构造函数Object</td>
-</tr>
-<tr>
-<td>Array</td>
-<td>构造函数Array</td>
-</tr>
-<tr>
-<td>Function</td>
-<td>构造函数Function</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>window对象</li>
-</ul>
-<p>##Math对象：</p>
-<p>###Math对象的属性如下：</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Math.E</td>
-<td>自然对数的底数，即常量e的值</td>
-</tr>
-<tr>
-<td>Math.LN10</td>
-<td>10的自然对数</td>
-</tr>
-<tr>
-<td>Math.LOG2E</td>
-<td>以2为底e的对数</td>
-</tr>
-<tr>
-<td>Math.PI</td>
-<td>π的值</td>
-</tr>
-<tr>
-<td>Math.SQRT1_2</td>
-<td>1/2的平方根</td>
-</tr>
-</tbody>
-</table>
-<p>###min()和max()方法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.min(<span class="number">23</span>,<span class="number">4</span>,<span class="number">43</span>,<span class="number">13</span>,<span class="number">45</span>);  <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
-<p>要找到数组中的最大或最小值，可以像下面这样使用apply()方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">12</span>,<span class="number">23</span>,<span class="number">42</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">43</span>,<span class="number">25</span>];</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>,values);</span><br></pre></td></tr></table></figure></p>
-<p>###舍入方法</p>
-<ul>
-<li>ceil() 向上舍入</li>
-<li>floor() 向下舍入</li>
-<li>round() 四舍五入</li>
-</ul>
-<p>###random()方法<br>返回介于0和1之间的一个随机数，如下面的例子返回一个1到10之间的随机数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> temp = <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random()*<span class="number">10</span>);</span><br></pre></td></tr></table></figure></p>
-<p>返回一个lowercase到uppercase之间的随机数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectFrom</span> (<span class="params">lowervalue,uppervalue</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> choices = uppervalue - lowervalue +<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()*choices+lowervalue);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>###其他方法<br>方法 | 说明<br>—- | —-<br>Math.abs(num) | 返回数值的绝对值<br>Math.sin(x) | 返回x的正弦值<br>Math.cos(x) | 返回x的余弦值<br>Math.exp(num) | 返回e的num次方<br>Math.log(num) | 返回num的自然对数<br>Math.sqrtnum) | 返回num的平方根</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
       
       <div class="clearfix"></div>
     </div>
@@ -519,6 +375,64 @@
       
         <p class="article-more-link">
           <a  href="/2016/03/02/使用高德地图JS-API/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-随想" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/22/随想/" class="article-date">
+  	<time datetime="2016-02-22T10:13:08.000Z" itemprop="datePublished">2016-02-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/22/随想/">随想</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天是大四下开学的第一天，虽说本人不上课已经很久了，但是看着身边领书上课的学弟学妹还是感慨颇多。过去的2015年经历了很多以前从未经历过的事，做了一个很重要的决定——保研。由于种种原因，也只是保送了本校的研究生。当时做这个决定的时候曾经有个人极力地劝阻我不要这么做，但当时还是铁了心地坚持了下去。我以为我会一直这么坚持的
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/02/22/随想/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
